@@ -11,7 +11,8 @@
     -In order to install this project the user must go to the terminal do an NPM i.  Then log into mysql and source the schema.js. Then exit mysql and run node seeds/index.js.  Then do an npm start to access the port.
     -From there the user will move to insomnia to run all of the get, post, put and delete.
 
-    -Follow the following URL to the video that demonstrates installation and usage: 
+    -Follow the following URL to the video that demonstrates installation and usage: https://drive.google.com/file/d/1yjVX9TBt8ngBEYADvh_7nsqDccf06oaG/view
+    
         
     
 # Usage
