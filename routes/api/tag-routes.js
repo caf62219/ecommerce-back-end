@@ -1,8 +1,10 @@
+//what we require in
 const router = require('express').Router();
 const { Tag, Product, ProductTag } = require('../../models');
 
 // The `/api/tags` endpoint
 
+// route to get all from the Tag table including the product
 router.get('/', async (req, res) => {
   try {
     const tagData = await Tag.findAll({
@@ -14,6 +16,7 @@ router.get('/', async (req, res) => {
   }
 });
 
+// route to get a single entry from the Tag table including the product by the id
 router.get('/:id', async (req, res) => {
   try {
     const tryData = await Tag.findByPk(req.params.id, {
@@ -31,6 +34,7 @@ router.get('/:id', async (req, res) => {
   }
 });
 
+//route to add a new Tag
 router.post('/', async (req, res) => {
   try {
     const newTag = await Tag.create({
@@ -42,6 +46,7 @@ router.post('/', async (req, res) => {
   }
 });
 
+//route to update a tag by the id
 router.put('/:id', async (req, res) => {
   try {
     const tagUpdate =await Tag.update (
@@ -62,9 +67,9 @@ router.put('/:id', async (req, res) => {
     }
 });
 
+// delete on tag by its `id` value
 router.delete('/:id', async (req, res) => {
-  // delete on tag by its `id` value
-  try {
+    try {
     const tagDelete =await Tag.destroy (
     {
       where: {

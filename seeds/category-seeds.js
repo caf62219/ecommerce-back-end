@@ -1,5 +1,6 @@
 const { Category } = require('../models');
 
+//data to enter into Category Table
 const categoryData = [
   {
     category_name: 'Shirts',

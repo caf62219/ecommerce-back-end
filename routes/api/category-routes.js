@@ -6,6 +6,7 @@ const { Category, Product } = require('../../models');
 //get all categories
 router.get('/', async (req, res) => {
   try {
+    //pull in in all from the Category table including the product
     const categoryData = await Category.findAll({
       include: [{ model: Product }],
     });
@@ -18,10 +19,12 @@ router.get('/', async (req, res) => {
 
 router.get('/:id', async (req, res) => {
   try {
+    //pull in the category table data for one id
     const categoryData = await Category.findByPk(req.params.id, {
       include: [{ model: Product }],
     });
 
+    //if an invalid category id is inserted return a message
     if (!categoryData) {
       res.status(404).json({ message: 'No category found with that id!' });
       return;
@@ -35,6 +38,7 @@ router.get('/:id', async (req, res) => {
 
 router.post('/', async (req, res) => {
   try {
+    //adding a new category
     const categoryData = await Category.create({
       category_name: req.body.category_name,
     });
@@ -70,6 +74,7 @@ router.delete('/:id', async (req, res) => {
   try {
     const categoryDelete =await Category.destroy (
     {
+      //gets the category based on the id given in the request paramaters
       where: {
         id: req.params.id,
       },

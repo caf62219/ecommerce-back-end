@@ -1,7 +1,10 @@
 # E-Commerce Back End
 
 # Description
-    -
+    -This project involved creating an E-Commerce back end.
+    -The E-Commerce Back End runs in the terminal and in Insomnia.
+    -The user can view the tables, create new fields within the tables, update the tables and delete rows from the tables.
+    -The options for the user to view are the Category table, the Product table, and the Tag table.
        
     
 # Installation
@@ -14,13 +17,13 @@
 # Usage
     
 
-<img src="" alt="" width="600px" />
-   
-    - 
+<img src="./images/terminal_screenshot.png" alt="Screenshot of the terminal starting the back-end" width="600px" />
 
-<img src="" alt="" width="600px" />   
+    - This screenshot is of the terminal when you are starting the program
+
+<img src="./images/insomnia_screenshot.png" alt="Screenshot of Insomnia running the get routes for Categories table" width="600px" />   
     
-    -   
+    -   This screenshot is of Insomnia running the get routes for Categories table
 
 # Credits
     Donnie Rawlings: https://github.com/drawlin22/
